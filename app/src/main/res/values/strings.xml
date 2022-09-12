@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyKeyTool</string>
+        <string name="hint">输入命令</string>
+        <string name="runs">运行</string>
+    </resources>
