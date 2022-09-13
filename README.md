@@ -6,7 +6,7 @@ This is [YutakaAoki'](https://github.com/YutakaAoki/KeyTool) fork of the KeyTool
 ## 例子:
 `-importkeystore -srckeystore /storage/emulated/0/a.jks -destkeystore /storage/emulated/0/test.jks -deststoretype pkcs12 -storepass 123456 -srcstorepass 123456`
 ## 测试:
-![avatar](/1.png)
+![test](https://github.com/liu1352183717/MyKeyTool/blob/master/1.png)
 ## 测试:
 ![avatar](/2.png)
 ## 测试:
