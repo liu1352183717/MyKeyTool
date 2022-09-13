@@ -6,10 +6,10 @@ This is [YutakaAoki'](https://github.com/YutakaAoki/KeyTool) fork of the KeyTool
 ## 例子:
 `-importkeystore -srckeystore /storage/emulated/0/a.jks -destkeystore /storage/emulated/0/test.jks -deststoretype pkcs12 -storepass 123456 -srcstorepass 123456`
 ## 测试:
-![avatar](/1.png)
+![avatar](/1.jpg)
 ## 测试:
-![avatar](/2.png)
+![avatar](/2.jpg)
 ## 测试:
-![avatar](/3.png)
+![avatar](/3.jpg)
 ## 测试:
-![avatar](/4.png)
+![avatar](/4.jpg)
