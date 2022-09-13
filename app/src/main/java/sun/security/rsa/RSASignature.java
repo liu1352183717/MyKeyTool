@@ -202,8 +202,6 @@ public abstract class RSASignature extends SignatureSpi {
             // return false rather than propagating the exception for
             // compatibility/ease of use
             return false;
-        }catch (GeneralSecurityException e) {
-            throw new SignatureException("Signature verification failed", e);
         } catch (IOException e) {
             throw new SignatureException("Signature encoding error", e);
         }

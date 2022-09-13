@@ -225,17 +225,30 @@ public final class CertAndKeyGen {
 
             X509CertInfo info = new X509CertInfo();
             // Add all mandatory attributes
-            info.set(X509CertInfo.VERSION,
-                     new CertificateVersion(CertificateVersion.V3));
-            info.set(X509CertInfo.SERIAL_NUMBER, new CertificateSerialNumber(
-                    new java.util.Random().nextInt() & 0x7fffffff));
+//            info.set(X509CertInfo.VERSION,
+//                     new CertificateVersion(CertificateVersion.V3));
+//            info.set(X509CertInfo.SERIAL_NUMBER, new CertificateSerialNumber(
+//                    new java.util.Random().nextInt() & 0x7fffffff));
+//            AlgorithmId algID = AlgorithmId.getAlgorithmId(sigAlg);
+//            info.set(X509CertInfo.ALGORITHM_ID,
+//                     new CertificateAlgorithmId(algID));
+//            info.set(X509CertInfo.SUBJECT, new CertificateSubjectName(myname));
+//            info.set(X509CertInfo.KEY, new CertificateX509Key(publicKey));
+//            info.set(X509CertInfo.VALIDITY, interval);
+//
+//            info.set(X509CertInfo.ISSUER,myname);
+//            info.set(X509CertInfo.ISSUER, new CertificateIssuerName(myname));
+            info.set(X509CertInfo.VERSION, new CertificateVersion(CertificateVersion.V3));
+            info.set(X509CertInfo.SERIAL_NUMBER, new CertificateSerialNumber(new java.util.Random().nextInt() & 0x7fffffff));
             AlgorithmId algID = AlgorithmId.getAlgorithmId(sigAlg);
-            info.set(X509CertInfo.ALGORITHM_ID,
-                     new CertificateAlgorithmId(algID));
-            info.set(X509CertInfo.SUBJECT, new CertificateSubjectName(myname));
-            info.set(X509CertInfo.KEY, new CertificateX509Key(publicKey));
+            info.set(X509CertInfo.ALGORITHM_ID, new CertificateAlgorithmId(algID));
+            info.set(X509CertInfo.SUBJECT, myname);
+            info.set(X509CertInfo.KEY,new CertificateX509Key(publicKey));
             info.set(X509CertInfo.VALIDITY, interval);
-            info.set(X509CertInfo.ISSUER, new CertificateIssuerName(myname));
+
+            info.set(X509CertInfo.ISSUER,myname);
+            //info.set(X509CertInfo.ISSUER, new CertificateIssuerName(myname));
+
 
             cert = new X509CertImpl(info);
             cert.sign(privateKey, this.sigAlg);
